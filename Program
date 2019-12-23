@@ -22,4 +22,3 @@ function Issue() {
 }
 Issue();
 Issue();
-Issue();
