@@ -1,0 +1,23 @@
+// ==UserScript==
+// @name         BitBucket Rename
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  try to take over the world!
+// @author       Gustavo Pedretti
+// @match        http:///
+// @grant        none
+// ==/UserScript==
+
+function Issue() {
+    var end = (window.location.search.substr(1).split('issueSummary'));
+    var loc = (window.location.search.substr(1).split('='));
+    var url = window.location.href;
+    url = window.location.hostname + window.location.pathname;
+    if (url=='bitbucket.org/branch/create' && loc[3]!=''){
+
+        window.location.href=('create?'+end[0]+'issueSummary=');
+
+}
+
+}
+Issue();
